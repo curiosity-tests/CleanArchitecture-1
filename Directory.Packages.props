@@ -37,6 +37,11 @@
     <PackageVersion Include="Serilog.Sinks.OpenTelemetry" Version="4.2.0" />
     <PackageVersion Include="Shouldly" Version="4.3.0" />
     <PackageVersion Include="SQLite" Version="3.53.4" />
+    <!-- Transitive via Testcontainers.MsSql. 2025.1.0 and below carry
+         GHSA-q939-rpr3-3284 (high), and NuGetAudit + warnings-as-errors turns
+         NU1903 into a restore failure. 2026.0.0 is the first patched release;
+         CentralPackageTransitivePinningEnabled makes this pin apply. -->
+    <PackageVersion Include="SSH.NET" Version="2026.0.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
     <PackageVersion Include="Testcontainers" Version="4.13.0" />
