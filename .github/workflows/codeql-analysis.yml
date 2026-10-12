@@ -11,8 +11,6 @@ on:
 #    paths-ignore:
 #      - 'docs/**'
   workflow_dispatch:  # Manual trigger for on-demand security scans
-  schedule:
-    - cron: '0 8 1 * *'  # Monthly at 8 AM UTC - catches new vulnerabilities
 
 jobs:
   analyze:
